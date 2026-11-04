@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Techsur TI | Infraestrutura, segurança e backup para empresas</title>
+<meta name="description" content="Infraestrutura de redes, servidores em nuvem, virtualização com Proxmox, VPN, firewall, backup e soluções MikroTik para empresas e cartórios. Fale com a Techsur TI pelo WhatsApp.">
+<meta name="theme-color" content="#062436">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Techsur TI">
+<meta property="og:title" content="Techsur TI | Soluções em TI">
+<meta property="og:description" content="Tecnologia, segurança e continuidade para o seu negócio.">
+<meta property="og:url" content="https://techsur.com.br">
+<meta property="og:image" content="https://techsur.com.br/img/og-techsur.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://techsur.com.br">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Techsur TI",
+  "alternateName": "TECHSUR Soluções em TI",
+  "slogan": "Tecnologia, segurança e continuidade para o seu negócio.",
+  "description": "Infraestrutura de redes, servidores, virtualização, segurança da informação e soluções de backup para empresas e cartórios.",
+  "url": "https://techsur.com.br",
+  "logo": "https://techsur.com.br/img/techsur-logotipo.svg",
+  "image": "https://techsur.com.br/img/og-techsur.png",
+  "telephone": "+55-33-98860-7882",
+  "areaServed": "Caratinga e região, Minas Gerais",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Caratinga",
+    "addressRegion": "MG",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://www.instagram.com/techsur_mg/"]
+}
+</script>
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-local" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-camadas" viewBox="0 0 24 24"><path d="M12 3.5l8.5 4.5L12 12.5 3.5 8 12 3.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3.5 12L12 16.5 20.5 12M3.5 16L12 20.5 20.5 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cadeado" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3M12 14.5v2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8-7.5 9.5-4.3-1.5-7.5-4.9-7.5-9.5V6L12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.8 12.2l2.3 2.3 4.2-4.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bloqueio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 6l12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-dividir" viewBox="0 0 24 24"><path d="M3.5 12H9l4-5.5h7M9 12l4 5.5h7M17.5 4l2.5 2.5L17.5 9M17.5 15l2.5 2.5-2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-troca" viewBox="0 0 24 24"><path d="M4 8h14.5M15.5 5l3 3-3 3M20 16H5.5M8.5 13l-3 3 3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-casa" viewBox="0 0 24 24"><path d="M3.5 10.5L12 4l8.5 6.5V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-nuvem" viewBox="0 0 24 24"><path d="M7 19h10.5a4 4 0 0 0 .4-7.98A6 6 0 0 0 6.3 10.1 4.5 4.5 0 0 0 7 19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-nuvem-sobe" viewBox="0 0 24 24"><path d="M7 19h10.5a4 4 0 0 0 .4-7.98A6 6 0 0 0 6.3 10.1 4.5 4.5 0 0 0 7 19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 16.5v-5M9.8 13.6L12 11.4l2.2 2.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-globo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-roteador" viewBox="0 0 24 24"><rect x="3" y="13" width="18" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 16.5h.01M10.5 16.5h.01M8.2 9.6a5.5 5.5 0 0 1 7.6 0M5.6 7a9.2 9.2 0 0 1 12.8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-servidor" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="4" y="13.5" width="16" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h.01M8 17h.01" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-backup" viewBox="0 0 24 24"><path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="ts-simbolo" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#ffffff"/><svg x="7" y="11" width="50" height="42" viewBox="0 0 1262 759" preserveAspectRatio="xMidYMid meet"><path d="M312.8 529.0L313.0 154.0 L159.0 154.0L5.0 154.0 L5.0 79.0L5.0 4.0 L379.8 4.2C585.9 4.3 752.7 4.5 750.5 4.7C658.6 12.8 595.3 64.9 580.1 145.0L578.5 153.5 L547.7 153.8L517.0 154.0 L517.0 440.8L517.0 727.5 L505.2 737.6C491.3 749.7 450.2 785.4 430.6 802.4C422.9 809.1 413.0 817.7 408.5 821.5C394.1 834.0 364.9 859.3 355.5 867.5C338.4 882.5 313.9 903.5 313.2 903.8C312.8 903.9 312.6 735.3 312.8 529.0Z" fill="#004A6F"/><path d="M311.8 526.5C311.6 321.6 311.8 154.0 312.2 154.0C312.7 154.0 313.0 321.6 313.0 526.5C313.0 731.4 312.8 899.0 312.5 899.0C312.2 899.0 311.9 731.4 311.8 526.5ZM515.7 728.9C516.7 727.6 517.0 667.9 517.3 440.4L517.5 153.5 L517.8 440.6C518.0 713.1 517.9 727.8 516.2 729.1C514.7 730.3 514.6 730.3 515.7 728.9ZM574.6 725.3C574.3 725.0 574.0 692.2 574.0 652.4L574.0 580.2 L587.2 579.5C594.5 579.1 641.7 579.5 692.0 580.4C886.0 583.8 969.8 582.1 1009.5 573.9C1022.7 571.1 1026.7 568.9 1034.5 560.0C1047.3 545.5 1050.9 534.3 1051.7 506.3C1052.2 487.6 1052.2 486.8 1049.6 478.6C1044.3 461.4 1030.5 448.5 1010.1 441.5C996.3 436.8 990.4 436.5 937.0 437.0C790.1 438.4 762.5 437.6 726.5 431.0C673.1 421.2 638.5 402.5 616.1 371.1C593.2 339.1 578.5 304.6 575.1 275.0C572.6 253.3 573.1 183.4 576.0 164.5C577.6 153.9 577.6 153.5 578.3 153.8C578.7 153.9 632.0 154.0 696.8 154.0L814.5 154.0 L809.5 157.1C791.6 168.3 784.4 179.2 781.0 200.6C773.2 249.1 787.5 281.2 821.0 290.5C828.8 292.6 899.5 293.0 968.1 291.3C1080.0 288.4 1141.7 298.5 1183.4 326.5C1213.1 346.5 1239.2 386.1 1250.5 428.3C1256.9 451.9 1257.5 460.4 1257.5 519.5L1257.5 573.5 L1254.9 585.5C1237.5 665.8 1161.7 719.9 1059.5 725.0C1039.3 726.1 575.7 726.3 574.6 725.3ZM4.5 79.0C4.5 37.5 4.6 20.5 4.7 41.2C4.9 62.0 4.9 96.0 4.7 116.7C4.6 137.5 4.5 120.5 4.5 79.0ZM824.0 77.6L824.0 4.0 L1041.0 4.0L1258.0 4.0 L1257.8 76.2L1257.5 148.5 L1043.0 149.0C925.0 149.3 827.5 149.9 826.2 150.4L824.0 151.2 L824.0 77.6Z" fill="#008FAD"/></svg></symbol>
+</svg>
+
+<div class="carregando ativo inicial" id="carregando" role="status" aria-live="polite">
+  <div class="carregando-caixa"><span class="carregando-anel" aria-hidden="true"></span><svg class="carregando-logo" viewBox="0 0 64 64" aria-hidden="true"><use href="#ts-simbolo"/></svg></div>
+  <span class="sr-only">Carregando</span>
+</div>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo" id="topo">
+  <div class="container topo-interno">
+    <a class="marca" href="#inicio" aria-label="Techsur TI, voltar ao início">
+   <img class="marca-logo" src="img/techsurnomeinteiro-branco.png" alt="" width="955" height="284">    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#especialidades">Especialidades</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#cartorios">Cartórios</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#contato">Contato</a>
+      <a class="menu-wa" data-wa="Olá! Vim pelo site da Techsur TI e quero falar sobre a infraestrutura de TI da minha empresa.">Conversar no WhatsApp</a>
+    </nav>
+    <div class="topo-acao">
+      <span class="status"><span class="led" data-led-status></span><span data-status-curto>Atendimento</span></span>
+      <a class="botao botao-ciano botao-pequeno" data-wa="Olá! Vim pelo site da Techsur TI e quero falar sobre a infraestrutura de TI da minha empresa."><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+    </div>
+    <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="hero" id="inicio">
+  <div class="container hero-grade">
+    <div class="hero-texto">
+      <h1>Tecnologia, segurança e continuidade para o seu negócio.</h1>
+      <p class="hero-lead">A Techsur TI é especializada em infraestrutura de redes, servidores, virtualização, segurança da informação e backup. Soluções personalizadas para empresas que precisam de mais segurança, disponibilidade e desempenho no dia a dia.</p>
+      <div class="hero-acoes">
+        <a class="botao botao-ciano" data-wa="Olá! Vim pelo site da Techsur TI e quero falar sobre a infraestrutura de TI da minha empresa."><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Conversar no WhatsApp</a>
+        <a class="botao botao-linha" href="#especialidades">Conhecer as especialidades</a>
+      </div>
+      <p class="hero-status"><span class="led" data-led-status></span><span data-status-longo>Atendimento pelo WhatsApp</span></p>
+    </div>
+    <figure class="rack-moldura">
+      <svg id="rack" viewBox="0 0 400 600" role="img" aria-labelledby="rack-titulo" data-estado="baguncado"><title id="rack-titulo">Ilustração de um rack de rede sendo organizado: os cabos embolados ficam alinhados e os equipamentos passam a indicar funcionamento normal.</title></svg>
+      <figcaption class="rack-legenda">
+        <p data-rack-texto aria-live="polite">Antes: cabos sem padrão, e ninguém sabe o que liga onde.</p>
+        <button class="rack-alternar" type="button" data-rack-botao>Ver organizado</button>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="secao especialidades" id="especialidades">
+  <div class="container">
+    <div class="secao-cabeca">
+      <h2>Nossas especialidades</h2>
+      <p>Serviços personalizados para empresas que buscam mais segurança, disponibilidade, desempenho e continuidade operacional.</p>
+    </div>
+    <ul class="servicos-grade">
+      <li class="servico" id="esp-servidores-nuvem">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-nuvem"/></svg></span><span class="servico-categoria">Servidores</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Servidores em nuvem</h3>
+        <p>Implementação e gerenciamento de servidores em nuvem para hospedar sistemas, aplicações, arquivos e serviços corporativos com segurança, flexibilidade e alta disponibilidade.</p>
+      </li>
+      <li class="servico" id="esp-proxmox">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-camadas"/></svg></span><span class="servico-categoria">Servidores</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Virtualização de servidores com Proxmox</h3>
+        <p>Implantação e administração de ambientes virtualizados com Proxmox VE, permitindo executar múltiplos servidores virtuais em uma única infraestrutura física, otimizando recursos e reduzindo custos.</p>
+      </li>
+      <li class="servico" id="esp-vpn">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-cadeado"/></svg></span><span class="servico-categoria">Segurança</span><span class="led" aria-hidden="true"></span></div>
+        <h3>VPN corporativa</h3>
+        <p>Configuração de redes privadas virtuais para acesso remoto seguro, interligação de unidades e comunicação protegida entre colaboradores, filiais e infraestrutura corporativa.</p>
+      </li>
+      <li class="servico" id="esp-pbs">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-backup"/></svg></span><span class="servico-categoria">Backup</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Backup de servidores com Proxmox Backup Server</h3>
+        <p>Implementação de soluções de backup para ambientes virtualizados, com recursos de deduplicação, armazenamento eficiente e recuperação de máquinas virtuais e dados.</p>
+      </li>
+      <li class="servico" id="esp-backup-nuvem">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-nuvem-sobe"/></svg></span><span class="servico-categoria">Backup</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Backup em nuvem</h3>
+        <p>Proteção de arquivos e informações empresariais por meio de cópias de segurança externas, contribuindo para a recuperação de dados em casos de falhas, incidentes ou perda de informações.</p>
+      </li>
+      <li class="servico" id="esp-bloqueio">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-bloqueio"/></svg></span><span class="servico-categoria">Segurança</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Bloqueio e controle de acesso a sites</h3>
+        <p>Implementação de políticas de navegação para bloquear sites e categorias de conteúdo, controle de acessos à internet e segurança da rede corporativa.</p>
+      </li>
+      <li class="servico" id="esp-firewall">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-escudo"/></svg></span><span class="servico-categoria">Segurança</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Firewall e segurança de rede</h3>
+        <p>Configuração e gerenciamento de firewalls para controle do tráfego de rede, restrição de acessos indevidos, regras de segurança e proteção da infraestrutura contra ameaças externas.</p>
+      </li>
+      <li class="servico" id="esp-loadbalance">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-dividir"/></svg></span><span class="servico-categoria">Conectividade</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Load balance: balanceamento de carga</h3>
+        <p>Configuração de balanceamento de carga entre links de internet, distribuindo o tráfego conforme as regras definidas para melhorar o aproveitamento da conexão e o desempenho da rede.</p>
+      </li>
+      <li class="servico" id="esp-failover">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-troca"/></svg></span><span class="servico-categoria">Conectividade</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Failover: redundância de conexão</h3>
+        <p>Implementação de mecanismos de contingência para alternar automaticamente para uma conexão ou recurso alternativo quando o principal apresenta falhas, reduzindo interrupções nos serviços.</p>
+      </li>
+      <li class="servico" id="esp-mikrotik">
+        <div class="servico-topo"><span class="servico-icone"><svg aria-hidden="true"><use href="#i-roteador"/></svg></span><span class="servico-categoria">Conectividade</span><span class="led" aria-hidden="true"></span></div>
+        <h3>Soluções MikroTik</h3>
+        <p>Configuração e gerenciamento de equipamentos MikroTik e RouterOS, incluindo roteamento, VLANs, VPNs, firewall, controle de banda, balanceamento de links e redundância de conexões.</p>
+      </li>
+      <li class="servico servico-cta">
+        <h3>Não sabe qual solução a sua empresa precisa?</h3>
+        <p>Conte como a empresa funciona hoje e a Techsur TI indica o caminho certo para mais segurança e continuidade.</p>
+        <a class="botao botao-ciano" data-wa="Olá! Vim pelo site da Techsur TI e quero ajuda para entender qual solução a minha empresa precisa."><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Conversar no WhatsApp</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="secao mapa-secao" id="como-funciona">
+  <div class="container">
+    <div class="secao-cabeca">
+      <h2>Como as soluções trabalham juntas</h2>
+      <p>As especialidades se completam. Veja como fica a estrutura de uma empresa atendida pela Techsur TI, simule a queda do link de internet ou a rotina de backup e toque em cada equipamento para saber o que ele faz.</p>
+    </div>
+    <div class="mapa-topo">
+      <div class="modos" role="group" aria-label="Escolha uma situação para simular">
+        <button class="modo" type="button" data-modo="normal" aria-pressed="true">Dia a dia</button>
+        <button class="modo" type="button" data-modo="queda" aria-pressed="false">Queda do link 1</button>
+        <button class="modo" type="button" data-modo="backup" aria-pressed="false">Rotina de backup</button>
+      </div>
+      <div class="status-rede" aria-label="Estado da rede na simulação">
+        <span class="st"><span class="led ligado" data-st-led="link1"></span>Link 1 <b data-st-valor="link1">Online</b></span>
+        <span class="st"><span class="led ligado" data-st-led="link2"></span>Link 2 <b data-st-valor="link2">Online</b></span>
+        <span class="st"><span class="led ligado" data-st-led="sistema"></span>Sistema <b data-st-valor="sistema">No ar</b></span>
+        <span class="st"><span class="led ligado" data-st-led="backup"></span>Backup <b data-st-valor="backup">Programado</b></span>
+      </div>
+    </div>
+    <p class="modo-texto" id="modo-texto" aria-live="polite"></p>
+    <div class="mapa" id="mapa">
+      <svg class="mapa-linhas" id="mapa-linhas" aria-hidden="true"></svg>
+      <div class="mapa-vao" aria-hidden="true"></div>
+      <button class="no" type="button" data-no="remoto"><span class="no-icone"><svg aria-hidden="true"><use href="#i-casa"/></svg></span><span class="no-titulo">Home office e filiais</span><span class="no-sub">Acesso pela VPN</span></button>
+      <button class="no" type="button" data-no="nuvemserv"><span class="no-icone"><svg aria-hidden="true"><use href="#i-nuvem"/></svg></span><span class="no-titulo">Servidores em nuvem</span><span class="no-sub">Sistemas fora do escritório</span></button>
+      <button class="no" type="button" data-no="internet"><span class="no-icone"><svg aria-hidden="true"><use href="#i-globo"/></svg></span><span class="no-titulo">Internet</span><span class="no-sub">Dois links de operadoras diferentes</span></button>
+      <button class="no" type="button" data-no="mikrotik"><span class="no-icone"><svg aria-hidden="true"><use href="#i-roteador"/></svg></span><span class="no-titulo">MikroTik</span><span class="no-sub">Firewall, VPN, bloqueio de sites, load balance e failover</span></button>
+      <button class="no" type="button" data-no="equipe"><span class="no-icone"><svg aria-hidden="true"><use href="#i-monitor"/></svg></span><span class="no-titulo">Equipe</span><span class="no-sub">Navegação com regras por setor</span></button>
+      <button class="no" type="button" data-no="proxmox"><span class="no-icone"><svg aria-hidden="true"><use href="#i-servidor"/></svg></span><span class="no-titulo">Servidor Proxmox</span><span class="no-sub">Vários servidores virtuais</span><span class="vms" aria-hidden="true"><span class="vm">Sistema</span><span class="vm">Arquivos</span><span class="vm">Banco</span></span></button>
+      <button class="no" type="button" data-no="pbs"><span class="no-icone"><svg aria-hidden="true"><use href="#i-backup"/></svg></span><span class="no-titulo">Proxmox Backup Server</span><span class="no-sub">Cópias das VMs com deduplicação</span></button>
+      <button class="no" type="button" data-no="nuvembk"><span class="no-icone"><svg aria-hidden="true"><use href="#i-nuvem-sobe"/></svg></span><span class="no-titulo">Backup em nuvem</span><span class="no-sub">Cópia fora da empresa</span></button>
+    </div>
+    <div class="no-info" id="no-info" aria-live="polite">
+      <div><h3 id="info-titulo">Toque em um equipamento</h3><p id="info-texto">Cada parte do mapa corresponde a uma ou mais especialidades da Techsur TI. Toque para ver o papel de cada uma na estrutura.</p></div>
+      <div class="info-links" id="info-links"></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao pilares-secao" id="sobre">
+  <div class="container pilares-grade">
+    <div class="pilares-texto">
+      <h2>Por que escolher a Techsur TI</h2>
+      <p>O objetivo da Techsur TI é auxiliar empresas de diferentes segmentos na construção e manutenção de uma infraestrutura tecnológica mais segura, organizada, eficiente e confiável.</p>
+      <p>As soluções são personalizadas para as necessidades de cada negócio, com foco na continuidade operacional, na proteção de dados e na conformidade com as exigências regulatórias aplicáveis.</p>
+      <a class="botao botao-azul" data-wa="Olá! Vim pelo site da Techsur TI e quero conhecer melhor o trabalho de vocês."><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Conversar no WhatsApp</a>
+    </div>
+    <ul class="pilares" id="pilares">
+      <li class="pilar"><span class="led" aria-hidden="true"></span><div><h3>Segurança</h3><p>Soluções para proteger dados, sistemas e redes corporativas.</p></div></li>
+      <li class="pilar"><span class="led" aria-hidden="true"></span><div><h3>Disponibilidade</h3><p>Infraestrutura planejada para reduzir interrupções.</p></div></li>
+      <li class="pilar"><span class="led" aria-hidden="true"></span><div><h3>Confiabilidade</h3><p>Estratégias de backup e recuperação de dados.</p></div></li>
+      <li class="pilar"><span class="led" aria-hidden="true"></span><div><h3>Eficiência</h3><p>Otimização de recursos e modernização tecnológica.</p></div></li>
+      <li class="pilar"><span class="led" aria-hidden="true"></span><div><h3>Atendimento especializado</h3><p>Soluções desenvolvidas conforme as necessidades de cada negócio.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="secao cartorios" id="cartorios">
+  <div class="container cartorios-grade">
+    <div class="cartorios-texto">
+      <h2>Soluções especializadas para cartórios</h2>
+      <p>A Techsur TI oferece soluções direcionadas às necessidades tecnológicas dos serviços notariais e de registro, com foco em segurança da informação, proteção de dados, continuidade operacional e adequação da infraestrutura de TI às exigências aplicáveis ao setor.</p>
+      <a class="botao botao-branco" data-wa="Olá! Trabalho em um cartório e quero conhecer as soluções da Techsur TI para serventias."><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Falar sobre o meu cartório</a>
+    </div>
+    <ul class="checklist">
+      <li><span class="marcador"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Backup dos servidores com Proxmox Backup Server</li>
+      <li><span class="marcador"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Cópia de segurança fora da serventia</li>
+      <li><span class="marcador"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Firewall e controle de acesso à rede</li>
+      <li><span class="marcador"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Link de internet redundante com failover</li>
+      <li><span class="marcador"><svg aria-hidden="true"><use href="#i-check"/></svg></span>VPN para acesso remoto seguro</li>
+      <li><span class="marcador"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Infraestrutura adequada às exigências do setor</li>
+    </ul>
+  </div>
+</section>
+
+<section class="secao clientes" id="clientes">
+  <div class="container">
+    <div class="secao-cabeca">
+      <h2>Empresas que confiam na Techsur TI</h2>
+      <p>Algumas das empresas e serventias que confiam a infraestrutura de TI à Techsur TI.</p>
+    </div>
+    <ul class="clientes-grade" id="clientes-grade"></ul>
+    <div class="depoimentos" id="depoimentos"></div>
+  </div>
+</section>
+
+<section class="secao contato" id="contato">
+  <div class="container contato-grade">
+    <div>
+      <div class="secao-cabeca">
+        <h2>Fale com a Techsur TI</h2>
+        <p>Preencha e a conversa abre no WhatsApp já com a sua mensagem escrita. Se preferir, chame direto por um dos canais abaixo.</p>
+      </div>
+      <ul class="canais">
+        <li class="canal"><span class="canal-icone"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><span><small>WhatsApp</small><a data-telefone data-wa="Olá! Vim pelo site da Techsur TI.">(33) 98860-7882</a></span></li>
+        <li class="canal"><span class="canal-icone" aria-hidden="true">@</span><span><small>Instagram</small><a data-instagram target="_blank" rel="noopener">@techsur_mg</a></span></li>
+        <li class="canal"><span class="canal-icone"><svg aria-hidden="true"><use href="#i-local"/></svg></span><span><small>Atendimento presencial</small><span class="canal-valor">Caratinga e região</span></span></li>
+        <li class="canal"><span class="canal-icone"><svg aria-hidden="true"><use href="#i-relogio"/></svg></span><span><small>Horário</small><span class="canal-valor" data-horario>Segunda a sexta, das 8h às 18h</span></span></li>
+      </ul>
+    </div>
+    <form class="formulario" id="formulario" novalidate>
+      <div class="campo" id="campo-nome">
+        <label for="f-nome">Seu nome</label>
+        <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar" required>
+      </div>
+      <div class="campos-duplos">
+        <div class="campo">
+          <label for="f-empresa">Empresa</label>
+          <input id="f-empresa" name="empresa" type="text" autocomplete="organization" placeholder="Opcional">
+        </div>
+        <div class="campo">
+          <label for="f-cidade">Cidade</label>
+          <input id="f-cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Opcional">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="f-assunto">Assunto</label>
+        <select id="f-assunto" name="assunto">
+          <option>Avaliação da infraestrutura</option>
+          <option>Servidores em nuvem</option>
+          <option>Virtualização com Proxmox</option>
+          <option>Backup (PBS ou nuvem)</option>
+          <option>VPN corporativa</option>
+          <option>Firewall e bloqueio de sites</option>
+          <option>Load balance e failover</option>
+          <option>Soluções MikroTik</option>
+          <option>Soluções para cartórios</option>
+          <option>Outro assunto</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-mensagem">O que está acontecendo?</label>
+        <textarea id="f-mensagem" name="mensagem" placeholder="Ex.: quando a internet cai o sistema para, e o backup é feito em HD externo"></textarea>
+      </div>
+      <p class="erro" id="f-erro" role="alert"></p>
+      <button class="botao botao-ciano" type="submit"><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>Abrir conversa no WhatsApp</button>
+      <p class="form-nota">Nada fica salvo no site: seus dados vão direto para a conversa no WhatsApp. Veja a <a href="politica-de-privacidade.html">política de privacidade</a>.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape-grade">
+      <div>
+        <a class="marca" href="#inicio" aria-label="Techsur TI, voltar ao início"><img class="marca-logo" src="img/techsur-logotipo-branco.svg" alt="" width="760" height="552"></a>
+        <p class="rodape-slogan">Tecnologia, segurança e continuidade para o seu negócio.</p>
+      </div>
+      <nav class="rodape-links" aria-label="Rodapé">
+        <a href="#especialidades">Especialidades</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#cartorios">Cartórios</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contato">Contato</a>
+        <a data-instagram target="_blank" rel="noopener">Instagram</a>
+        <a href="politica-de-privacidade.html">Política de privacidade</a>
+      </nav>
+    </div>
+    <div class="rodape-legal">
+      <span>© <span data-ano>2026</span> Techsur TI. CNPJ 00.000.000/0001-00.</span>
+      <span>Caratinga, Minas Gerais</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-flutuante" data-wa="Olá! Vim pelo site da Techsur TI e quero falar sobre a infraestrutura de TI da minha empresa." aria-label="Conversar com a Techsur TI no WhatsApp"><span class="led" data-led-status></span><svg class="icone" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>

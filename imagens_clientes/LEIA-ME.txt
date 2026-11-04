@@ -1,0 +1,26 @@
+COMO COLOCAR AS FOTOS DOS CLIENTES
+==================================
+
+1. Coloque as fotos nesta pasta com estes nomes:
+
+   cliente-1.jpg   -> 1º cartão da seção "Clientes"
+   cliente-2.jpg   -> 2º cartão
+   ...
+   cliente-8.jpg   -> 8º cartão
+
+   Pode ser .jpg, .jpeg, .png ou .webp.
+
+2. O nome da empresa e o Instagram ficam no começo do arquivo
+   js/script.js, na lista "clientes":
+
+   { nome: "Cliente 1", instagram: "perfil_cliente_1", foto: "cliente-1" },
+
+   - nome: o nome que aparece no cartão
+   - instagram: o @ da empresa (com ou sem o @)
+   - foto: o nome do arquivo desta pasta, sem a extensão
+
+3. Dicas:
+   - Use fotos na horizontal (ex.: 800 x 600). As bordas que sobrarem são cortadas.
+   - Prefira arquivos leves (até uns 300 KB) para o site abrir rápido.
+   - Para mais de 8 clientes, copie uma linha da lista e mude para cliente-9, etc.
+   - Para remover um cliente, apague a linha dele da lista.
